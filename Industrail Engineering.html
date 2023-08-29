@@ -4,7 +4,34 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+		<style>
+			.side-by-side1 {
+			  display: flex;
+			  justify-content: space-between;
+			}
+			
+			.paragraph1 {
+			  width: 48%; /* Adjust as needed */
+			}
+		  </style>
+		  <style>
+			.side-by-side2 {
+			  display: flex;
+			  justify-content: space-between;
+			  align-items: center;
+			}
+			
+			.paragraph2 {
+			  width: 48%; /* Adjust as needed */
+			  padding: 10px;
+			}
+			
+			.paragraph img {
+			  max-width: 100%;
+			  height: auto;
+			}
+		  </style>
+		
 		<!-- Bootstrap Min CSS --> 
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		<!-- Owl Theme Default Min CSS --> 
@@ -29,14 +56,20 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 		<!-- Responsive CSS -->
 		<link rel="stylesheet" href="assets/css/responsive.css">
+		<!--Animate CSS-->
+		<link rel="stylesheet" href="animate-css-animate.css-e8c4fab/animate.css">
 		
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<!-- Title -->
-		<title>Idaly - Industry & Factory HTML Template</title>
+		
+		<title>Getsee Design</title>
+		
+
     </head>
 
     <body>
+		<div id="content-container"></div>
 		<!-- Start Preloader Area -->
 		<div class="preloader">
 			<div class="lds-ripple">
@@ -54,21 +87,21 @@
 						<div class="col-lg-12">
 							<ul>
 								<li>
-									<a href="tel:+108-095-3221">
+									<a href="tel:087-9467436">
 										<i class="ri-phone-line"></i>
-										+108-095-3221
+										087-9467436
 									</a>
 								</li>
 								<li>
 									<i class="ri-map-pin-line"></i>
-									3 Edgar Buildings, George Street, England, BA1 2FJ
+									Balla, Co Mayo
 								</li>
 								<li>
+
 									<a href="mailto:hello@idaly.com">
 										<i class="ri-mail-line"></i>
-										hello@idaly.com
-									</a>
-								</li>
+										info@getseedesign.com
+								</li><!--
 								<li>
 									<div class="navbar-option-item navbar-option-language dropdown language-option"> 
 										<button class="dropdown-toggle" type="button" id="language1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -95,7 +128,7 @@
 											</a>
 										</div>
 									</div>
-								</li>
+								</li>-->
 							</ul>
 						</div>
 					</div>
@@ -110,7 +143,7 @@
 						<div class="mobile-responsive-menu">
 							<div class="logo">
 								<a href="index.html">
-									<img src="assets/images/logo.png" alt="logo">
+									<img src="assets/images/getseedesign_logo.jpg" alt="logo">
 								</a>
 							</div>
 						</div>
@@ -121,20 +154,20 @@
 					<div class="container-fluid">
 						<nav class="navbar navbar-expand-md navbar-light">
 							<a class="navbar-brand" href="index.html">
-								<img src="assets/images/logo.png" alt="logo">
+								<img src="assets/images/getseedesign_logo_edit.jpg" alt="logo">
 							</a>
 
 							<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 								<ul class="navbar-nav m-auto">
 									<li class="nav-item">
-										<a href="#" class="nav-link">
+										<a href="index.html" class="nav-link active">
 											Home 
-											<i class="ri-arrow-down-s-line"></i>
+											<!--<i class="ri-arrow-down-s-line"></i>-->
 										</a>
 
-										<ul class="dropdown-menu">
+										<!--<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="index.html" class="nav-link">Home One</a>
+												<a href="index.html" class="nav-link active">Home One</a>
 											</li>
 											<li class="nav-item">
 												<a href="index-2.html" class="nav-link">Home Two</a>
@@ -143,35 +176,43 @@
 												<a href="index-3.html" class="nav-link">Home Three</a>
 											</li>
 										</ul>
-									</li>
+									</li>-->
 
-									<li class="nav-item">
+
+
+									<!--<li class="nav-item">
 										<a href="about-us.html" class="nav-link">About Us</a>
-									</li>
+									</li>-->
 
+
+<!--change about us to industrial/general engineering-->
 									<li class="nav-item">
 										<a href="#" class="nav-link">
-											Services 
-											<i class="ri-arrow-down-s-line"></i>
+											Industrial/General Engineering 
+											<!--<i class="ri-arrow-down-s-line"></i>-->
 										</a>
 
 										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="services.html" class="nav-link">Services</a>
+												<a href="Industrial Engineering.html" class="nav-link">Industrial</a>
 											</li>
 											<li class="nav-item">
-												<a href="services-details.html" class="nav-link">Services Details</a>
+												<a href="services-details.html" class="nav-link">Residential</a>
+											</li>
+											<li class="nav-item">
+												<a href="services-details.html" class="nav-link">Plant/Agri</a>
 											</li>
 										</ul>
 									</li>
 
 									<li class="nav-item">
 										<a href="#" class="nav-link">
-											Pages 
-											<i class="ri-arrow-down-s-line"></i>
+											Forged Range 
+											<!--<i class="ri-arrow-down-s-line"></i>-->
 										</a>
+										
 
-										<ul class="dropdown-menu">
+										<!--<ul class="dropdown-menu">
 											<li class="nav-item">
 												<a href="faq.html" class="nav-link">FAQ</a>
 											</li>
@@ -180,13 +221,13 @@
 												<a href="#" class="nav-link">
 													Shop 
 													<i class="ri-arrow-down-s-line"></i>
-												</a>
+												</a>-->
 			
 												<ul class="dropdown-menu">
 													<li class="nav-item">
-														<a href="products.html" class="nav-link">Products</a>
+														<a href="services-details.html" class="nav-link">Interior Range</a>
 													</li>
-													<li class="nav-item">
+													<!--<li class="nav-item">
 														<a href="cart.html" class="nav-link">Cart</a>
 													</li>
 													<li class="nav-item">
@@ -237,35 +278,55 @@
 														<a href="register.html" class="nav-link">Register</a>
 													</li>
 												</ul>
-											</li>
+											</li>-->
 											
-											<li class="nav-item">
+											<!--<li class="nav-item">
 												<a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-											</li>
+											</li>-->
 											<li class="nav-item">
-												<a href="terms-of-service.html" class="nav-link">Terms Of Service</a>
+												<a href="services-details.html" class="nav-link">External Range</a>
 											</li>
 											<li class="nav-item">
 												<a href="coming-soon.html" class="nav-link">Coming Soon</a>
-											</li>
-											<li class="nav-item">
+											</li> </ul>
+											<!--<li class="nav-item">
 												<a href="404.html" class="nav-link">404 Page</a>
 											</li>
 										</ul>
-									</li>
+									</li>-->
 
 									<li class="nav-item">
-										<a href="#" class="nav-link active">
-											Portfolio 
-											<i class="ri-arrow-down-s-line"></i>
+										<a href="#" class="nav-link">
+											Gym Solutions 
+											<!--<i class="ri-arrow-down-s-line"></i>-->
 										</a>
 
 										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="projects.html" class="nav-link">Projects</a>
+												<a href="services-details.html" class="nav-link">Commerical</a>
 											</li>
+											
+												<li class="nav-item">
+													<a href="services-details.html" class="nav-link">Residential</a>
+												</li></ul>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											Portfolio 
+											<!--<i class="ri-arrow-down-s-line"></i>-->
+										</a>
+										<!--
+
+										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="project-details.html" class="nav-link active">Project Details</a>
+												<a href="projects.html" class="nav-link">Projects</a>
+											</li></ul></li>-->
+
+											<li class="nav-item">
+												<a href="contact.html" class="default-btn">
+													Request a Callback
+												<!--<i class="ri-arrow-down-s-line"></i>--></a></li><!--
+											<li class="nav-item">
+												<a href="project-details.html" class="nav-link">Project Details</a>
 											</li>
 										</ul>
 									</li>
@@ -287,9 +348,9 @@
 												<a href="blog-details.html" class="nav-link">Blog Details</a>
 											</li>
 										</ul>
-									</li>
+									</li>-->
 
-									<li class="nav-item">
+									<!--<li class="nav-item">
 										<a href="contact.html" class="nav-link">Contact</a>
 									</li>
 								</ul>
@@ -308,25 +369,26 @@
 											</a>
 										</li>
 										<li>
-											<a href="projects.html" class="default-btn">
-												Get A Quote
-												<i class="ri-arrow-right-line"></i>
-											</a>
+											
+												
+										
+											
 										</li>
 									</ul>
-								</div>
+								</div>-->
 							</div>
 						</nav>
 					</div>
 
 					<div class="navbar-shape">
-						<img src="assets/images/navbar-shape.png" alt="Image">
+						<img src="assets/images/navbar-shape.png"  alt="Image">
 					</div>
 		
 					<div class="navbar-shape-2">
 						<img src="assets/images/navbar-shape-2.png" alt="Image">
 					</div>
 				</div>
+				<!--
 
 				<div class="others-option-for-responsive">
 					<div class="container">
@@ -341,7 +403,7 @@
 						<div class="container">
 							<div class="option-inner">
 								<div class="others-options justify-content-center d-flex align-items-center">
-									<ul>
+									
 										<li>
 											<a href="search-page.html">
 												<i class="ri-search-line"></i>
@@ -359,12 +421,12 @@
 												<i class="ri-arrow-right-line"></i>
 											</a>
 										</li>
-									</ul>
+										
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 			<!-- End Navbar Area -->
 		</header>
