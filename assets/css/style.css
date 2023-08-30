@@ -2268,7 +2268,7 @@ Footer Area Style
   top: 2px;
 }
 
-.footer-table {padding-right:10px;}
+.table ,td {padding-right:10px;}
 
 /*
 Team Area Style
