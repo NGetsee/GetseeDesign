@@ -2097,7 +2097,7 @@ Footer Area Style
 
 .single-footer-widget h3 {
   font-size: 25px;
-  color: var(--white-color);
+  color: #ffcc00;
   font-weight: 700;
   margin-bottom: 30px;
 }
@@ -2268,7 +2268,7 @@ Footer Area Style
   top: 2px;
 }
 
-.table ,td {padding-right:10px;
+.table ,th ,td {padding-right:10px;
 color:white;}
 
 /*
