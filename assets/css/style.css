@@ -186,6 +186,11 @@ textarea.form-control {
   padding-bottom: 100px;
 }
 
+.ptb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .ptb-70 {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -199,7 +204,7 @@ textarea.form-control {
   padding-bottom: 100px;
 }
 .pt-40 {
-  padding-top: 70px;
+  padding-top: 40px;
 }
 
 .pt-70 {
