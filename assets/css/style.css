@@ -2086,10 +2086,13 @@ Footer Area Style
 
 .single-footer-widget {
   margin-bottom: 30px;
+  
 }
 
 .single-footer-widget img {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  padding-right: 150px;
+  
 }
 
 .single-footer-widget h3 {
