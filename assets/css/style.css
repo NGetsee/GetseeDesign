@@ -276,7 +276,7 @@ Default Btn Area Style*/
   position: relative;
   z-index: 1;
   overflow: hidden;
-  display: inline-table;
+  display: inherit;
   padding: 15px 35px;
   background-color: var(--main-color);
 }
