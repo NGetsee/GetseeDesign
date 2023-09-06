@@ -39,6 +39,46 @@
 .clear{clear: both;}
 			
 		  </style>
+
+		  <style>
+div.slide-fast1 {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fast1 div.inner {
+  animation: slide-fast1 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fast1 {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+div.slide-fast2 {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fast2 div.inner {
+  animation: slide-fast2 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fast2 {
+  from {
+    margin-right: 100%;
+  }
+
+  to {
+    margin-right: 0%;
+  }
+}
+</style>
 		
 		<!-- Bootstrap Min CSS --> 
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -476,6 +516,8 @@
 					<div class="float-container">
 					<div class="float-child">
 					<div class="first">
+					<div class="slide-fast1">
+					<div class="inner">
 					<ul>
 					<li>SPECIALIST WELDING</li>
 					<li>PANEL REPAIR</li>
@@ -488,11 +530,16 @@
 					</p>
 				</div>
 				</div>
+				</div>
+				</div>
 				
 				<div class="float-child">
 					<div class="second">
-					<img src="assets/images/welding.jpg"></div></div></div>
+					<div class="slide-fast1">
+					<div class="inner">
+					<img src="assets/images/welding.jpg"></div></div></div></div>
 					<div class="clear"></div>
+					
 
 
 
@@ -506,11 +553,15 @@
 						<div class="float-container">
 						<div class="float-child">
 						<div class="third">
+						<div class="slide-fast2">
+					<div class="inner">
 
 						<img src="assets/images/drill machine.jpg"></div></div>
-
+						</div></div>
 						<div class="float-child">
 							<div class="fourth">
+							<div class="slide-fast2">
+					<div class="inner">
 						<ul>
 					<li>SPECIALIST WELDING</li>
 					<li>PANEL REPAIR</li>
@@ -519,7 +570,7 @@
 					<li>SECURITY CAGES</li>
 					<li>STORAGE SYSTEMS</li>
 					<li>CUSTOM BUILDS</li>
-					</ul></p></div></div></div>
+					</ul></p></div></div></div></div></div>
 					<div class="clear"></div>
 
 
