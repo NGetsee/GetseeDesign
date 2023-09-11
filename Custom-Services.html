@@ -5,32 +5,109 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<style>
-			.side-by-side1 {
-			  display: flex;
-			  justify-content: space-between;
-			}
+		.float-container {
+    border: 3px solid #fff;
+    padding-left: 0px;
+	font-size: 20px;
+	font-style: italic;}
+
+	.float-child .main{
+    width: 100%;
+    
+    padding-left:0%;
+    
+
+}
+.float-child .first{
+    width: 50%;
+    float: left;
+    padding-left:10%;
+	padding-right: 10%;
+    
+}  
+
+.float-child .second{
+    width: 50%;
+    float: right;
+    padding-left: 10px;
+    
+}  
+.float-child .third {
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+    
+}  
+.float-child .fourth {
+    width: 50%;
+    float: right;
+	padding-left:10%;
+    
+}  
+
+.clear{clear: both;}
 			
-			.paragraph1 {
-			  width: 48%; /* Adjust as needed */
-			}
 		  </style>
+
 		  <style>
-			.side-by-side2 {
-			  display: flex;
-			  justify-content: space-between;
-			  align-items: center;
-			}
-			
-			.paragraph2 {
-			  width: 48%; /* Adjust as needed */
-			  padding: 10px;
-			}
-			
-			.paragraph img {
-			  max-width: 100%;
-			  height: auto;
-			}
-		  </style>
+		  	  div.slide-fastmain {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fastmain div.inner {
+  animation: slide-fast1 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fastmain {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+div.slide-fast1 {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fast1 div.inner {
+  animation: slide-fast1 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fast1 {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+div.slide-fast2 {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fast2 div.inner {
+  animation: slide-fast2 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fast2 {
+  from {
+    margin-right: 100%;
+  }
+
+  to {
+    margin-right: 0%;
+  }
+}
+</style>
+
+
 		
 		<!-- Bootstrap Min CSS --> 
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -160,7 +237,7 @@
 							<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 								<ul class="navbar-nav m-auto">
 									<li class="nav-item">
-										<a href="index.html" class="nav-link active">
+										<a href="index.html" class="nav-link">
 											Home 
 											<!--<i class="ri-arrow-down-s-line"></i>-->
 										</a>
@@ -175,8 +252,8 @@
 											<li class="nav-item">
 												<a href="index-3.html" class="nav-link">Home Three</a>
 											</li>
-										</ul>
-									</li>-->
+										</ul>-->
+									</li>
 
 
 
@@ -197,10 +274,10 @@
 												<a href="Industrial Engineering.html" class="nav-link">Industrial</a>
 											</li>
 											<li class="nav-item">
-												<a href="services-details.html" class="nav-link">Residential</a>
+												<a href="Residential Engineering.html" class="nav-link">Residential</a>
 											</li>
 											<li class="nav-item">
-												<a href="services-details.html" class="nav-link">Plant/Agri</a>
+												<a href="Plant_Agri Engineering.html" class="nav-link">Plant/Agri</a>
 											</li>
 										</ul>
 									</li>
@@ -225,7 +302,7 @@
 			
 												<ul class="dropdown-menu">
 													<li class="nav-item">
-														<a href="services-details.html" class="nav-link">Interior Range</a>
+														<a href="Forged_Interior.html" class="nav-link">Interior Range</a>
 													</li>
 													<!--<li class="nav-item">
 														<a href="cart.html" class="nav-link">Cart</a>
@@ -284,16 +361,16 @@
 												<a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
 											</li>-->
 											<li class="nav-item">
-												<a href="services-details.html" class="nav-link">External Range</a>
+												<a href="External Range.html" class="nav-link">External Range</a>
 											</li>
 											<!--<li class="nav-item">
 												<a href="coming-soon.html" class="nav-link">Coming Soon</a>
 											</li> </ul>
 											<li class="nav-item">
 												<a href="404.html" class="nav-link">404 Page</a>
-											</li>
+											</li>-->
 										</ul>
-									</li>-->
+									</li>
 
 									<li class="nav-item">
 										<a href="#" class="nav-link">
@@ -303,17 +380,23 @@
 
 										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="services-details.html" class="nav-link">Commerical</a>
+												<a href="Commercial_Gym.html" class="nav-link">Commerical</a>
 											</li>
 											
 												<li class="nav-item">
-													<a href="services-details.html" class="nav-link">Residential</a>
+													<a href="Residential_Gym.html" class="nav-link">Residential</a>
 												</li></ul>
 									<li class="nav-item">
-										<a href="#" class="nav-link">
+									<a href="Custom-Services.html" class="nav-link active">
+											Custom Services 
+														<!--<i class="ri-arrow-down-s-line"></i>-->
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="Portfolio.html" class="nav-link">
 											Portfolio 
 											<!--<i class="ri-arrow-down-s-line"></i>-->
-										</a>
+										</a></li>
 										<!--
 
 										<ul class="dropdown-menu">
@@ -436,17 +519,17 @@
 		<div class="page-title-area bg-3">
 			<div class="container">
 				<div class="page-title-content">
-					<h2>Industrial/General Engineering</h2>
+					<h2>Plant & Agri Engineering</h2>
 
-					<ul>
+					<!--<ul>
 						<li>
 							<a href="index.html">
 								Home 
 							</a>
 						</li>
 
-						<li class="active">Services Details</li>
-					</ul>
+						<li class="active">Service Details</li>
+					</ul>-->
 				</div>
 			</div>
 
@@ -457,27 +540,160 @@
 		<!-- End Page Title Area -->
 
 		<!-- Start Services Details Area -->
-		<section class="services-details-area ptb-50">
+			<section class="services-details-area ptb-50">
 			<div class="container">
 				<div class="services-details-content main-default-content">
 					<!--<h2>Automation Industry</h2>-->
-
+					<div class="float-container">
+					<div class="gap-20"></div>
+					<div class="float-child">
+					<div class="main">
+					<div class="slide-fastmain">
+					<div class="inner">
 					<img src="assets/images/services-bg.jpg" alt="Image">
+					</div>
+				</div>
+				</div>
+				<div class=clear></div>
 
-					<div class="gap-20"></div>
-					<div class="side-by-side1">
+							<div class="gap-20"></div>
+					<div class="float-container">
+					<div class="float-child">
+					<div class="first">
+					<div class="slide-fast1">
+					<div class="inner">
+					<h3>Powder Coating</h3>
+					<p>Powder Coating is the art of .... </p>
 
-					<p class="paragraph1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+					<section style="display: flex; justify-content: flex-end;">
+					<!--<button class=default-btn a href="Portfolio.html#Powder Coating Projects">Powder Coating Projects</a></button>-->
+   <button class="default-btn"  onclick="navigateToSection1()">Powder Coating
 
-					<p class="paragraph2"><img src="assets/images/welding.jpg"></p></div>
-
-					<div class="gap-20"></div>
+								
+											<i class="ri-arrow-right-line"></i>
+										</button>
 					
-					<div class="side-by-side2">
+				</div>
+				</div>
+				</div>
+				</div>
+					
+				<div class="float-child">
+					<div class="second">
+					<div class="slide-fast1">
+					<div class="inner">
+					<img src="assets/images/welding.jpg"></div></div></div></div>
+					<div class="clear"></div>
+					
+					
 
-						<p class="paragraph2"><img src="assets/images/drill machine.jpg"></p>
-	
-						<p class="paragraph1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p></div>
+					<div class="gap-20"></div>
+						<div class="float-container">
+						<div class="float-child">
+						<div class="third">
+						<div class="slide-fast2">
+					<div class="inner">
+
+						<img src="assets/images/drill machine.jpg"></div></div>
+						</div></div>
+						<div class="gap-20"></div>
+
+						<div class="float-child">
+							<div class="fourth">
+							<div class="slide-fast2">
+					<div class="inner">
+						<h3>CAD Prototype & Development</h3>
+					<p>We invisage....</p>
+					<section style="display: flex; justify-content: flex-end;">
+  <button class="default-btn" onclick="navigateToSection2()">CAD Prototype Projects
+
+								
+											<i class="ri-arrow-right-line"></i>
+										</button>
+					
+										
+					</div>
+				</div>
+				</div>
+				</div>
+
+					<div class=clear></div>
+					
+					<div class="gap-20"></div>
+							<div class="gap-20"></div>
+					<div class="float-container">
+					<div class="float-child">
+					<div class="first">
+					<div class="slide-fast1">
+					<div class="inner">
+					<h2>Specialized Engineering</h2>
+					<p>Specialized Engineering is just one of the Services that we pride ourselfs on delivering, the concept behind this service is driven by the unique desire the Customer has, for example a cover for a Gas Barrel that offers both protection to the bottle and also gives ....</p>
+					<section style="display: flex; justify-content: flex-end;"><!--
+<button class=default-btn button onclick="location = 'portfolio.html'">
+											Speacialized Engineering-->
+											 <button class="default-btn"  onclick="navigateToSpecialized()">Speacialized Engineering
+
+								
+											<i class="ri-arrow-right-line"></i>
+										</button>
+										
+				</div>
+				</div>
+				</div>
+				</div>
+					
+				<div class="float-child">
+					<div class="second">
+					<div class="slide-fast1">
+					<div class="inner">
+					<img src="assets/images/welding.jpg"></div></div></div></div>
+					<div class="clear"></div>
+					<div class="clear"></div>
+					<div class="gap-20"></div>
+
+					<div class="clear"></div>
+					
+					
+
+					<div class="gap-20"></div>
+						<div class="float-container">
+						<div class="float-child">
+						<div class="third">
+						<div class="slide-fast2">
+					<div class="inner">
+
+						<img src="assets/images/drill machine.jpg"></div></div>
+						</div></div>
+						<div class="gap-20"></div>
+
+						<div class="float-child">
+							<div class="fourth">
+							<div class="slide-fast2">
+					<div class="inner">
+						<h3>Upholstry Sourcing</h3>
+					<p>We know how much wear and tear your Gym Equipment gets due to daily use.  The structure of the Equipment may be fully functional however the "pretty" look of the Equipment may lead to uncertainty as to the quality of the unit.  We offer Uphoslty Sourcing and Reconditioning with the added service or dismantling the Unit for preparation.</p>
+								<section style="display: flex; justify-content: flex-end;">
+ <button class="default-btn"  onclick="navigateToUpholstry()">Upholstry Reconditioning Projects
+
+											<i class="ri-arrow-right-line"></i>
+										</button>
+										
+					</div>
+				</div>
+				</div>
+				</div>
+
+					<div class=clear></div>
+					
+
+
+		
+					
+					</div></div></div></div></div>
+
+					
+
+					
 	
 						<!--<div class="gap-20"></div>
 
@@ -506,119 +722,7 @@
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>-->
 				</div>
 			</div>
-		</section>
-		<!--<div style="clear: both;"></div>-->
-		<!-- End Services Details Area -->
-
-		<!-- Start Join Team Area 
-		<div class="join-our-team-area ptb-100">
-			<div class="container">
-				<div class="join-our-team-content">
-					<span class="top-title">JOIN OUR TEAM</span>
-					<h2>An Inspiring Career Awaits You In IDALY</h2>
-					
-					<button class="default-btn">
-						Apply Now
-					</button>
-				</div>
-			</div>
-		</div>
-		End Join Team Area -->
-
-		<!-- End Fetcher Services Area -->
-		<section class="fetcher-servicess-area pt-40 pb-70">
-			<div class="container">
-				<div class="section-title">
-					<span class="top-title">OTHER SERVICES</span>
-					<h2>Other Services That We Offer</h2>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna. aliquyam erat, sed diam voluptua</p>
-				</div>
-				<div class="row justify-content-center">
-					<div class="col-lg-3 col-sm-6">
-						<div class="single-fetcher-services">
-							<img src="assets/images/residential2.png" alt="Image">
-
-							<h3>
-								<a href="services-details.html">
-									Residential Engineering
-								</a>
-							</h3>
-
-							<!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>-->
-
-							<a href="services-details.html" class="read-more">
-								Find Out More
-								<i class="ri-arrow-right-line"></i>
-							</a>
-
-							<span>1</span>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6">
-						<div class="single-fetcher-services">
-							<img src="assets/images/icon/icon-14.png" alt="Image">
-
-							<h3>
-								<a href="services-details.html">
-									Plant/Agri
-								</a>
-							</h3>
-
-							<!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>-->
-
-							<a href="services-details.html" class="read-more">
-								Find Out More
-								<i class="ri-arrow-right-line"></i>
-							</a>
-
-							<span>2</span>
-						</div>
-					</div>
-
-					<!--<div class="col-lg-3 col-sm-6">
-						<div class="single-fetcher-services">
-							<img src="assets/images/icon/icon-15.png" alt="Image">
-
-							<h3>
-								<a href="services-details.html">
-									Industry Construction
-								</a>
-							</h3>
-
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-
-							<a href="services-details.html" class="read-more">
-								Read More
-								<i class="ri-arrow-right-line"></i>
-							</a>
-
-							<span>3</span>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6">
-						<div class="single-fetcher-services">
-							<img src="assets/images/icon/icon-16.png" alt="Image">
-
-							<h3>
-								<a href="services-details.html">
-									Power System
-								</a>
-							</h3>
-
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-
-							<a href="services-details.html" class="read-more">
-								Read More
-								<i class="ri-arrow-right-line"></i>
-							</a>
-
-							<span>4</span>
-						</div>
-					</div>-->
-				</div>
-			</div>
+			<div class=clear></div>
 		</section>
 		<!-- End Fetcher Services Area -->
 
@@ -643,7 +747,7 @@
 								</li>
 								<li>
 									<i class="ri-mail-line"></i>
-									<a href="mailto:hello@idaly.com">hello@idaly.com</a>
+									<a href="mailto:info@getseedesign.com">info@getseedesign.com</a>
 								</li>
 							</ul>
 						</div>
@@ -655,30 +759,51 @@
 
 							<ul class="import-link">
 								<li>
-									<a href="Industrail Engineering.html">
-										Industrial Engineering
+									<a href="Industrial Engineering.html">
+										Industrial/General Engineering
 									</a>
 								</li>
 								<li>
-									<a href="Forged Range.html">
-										Forged Range
+									<a href="Residential Engineering.html">
+										Residential Engineering
 									</a>
 								</li>
 								<li>
-									<a href="Gym Solutions.html">
-										Gym Solutions
+									<a href="Plant_Agri Engineering.html">
+										Plant/Agri Engineering
 									</a>
 								</li>
-								<li>
-									<a href="Custom Services.html">
-										Custom Services
-									</a>
-								</li>
-								<li>
-									<a href="contact.html">
-										Contact
-									</a>
-								</li>
+									<li>
+										<a href="Forged_Interior.html">
+											Forged Interior
+										</a>
+									</li>
+									<li>
+										<a href="External Range.html">
+											Forged External
+										</a>
+									</li>
+									<li>
+										<a href="Commercial_Gym.html">
+											Commercial Gym Solutions
+										</a>
+									</li>
+									<li>
+										<a href="Residential_Gym.html">
+											Residential Gym Solutions
+										</a>
+									</li>
+									
+									<li>
+										<a href="Custom Services.html">
+											Custom Services
+										</a>
+									</li>
+									<li>
+										<a href="contact.html">
+											Contact
+										</a>
+									</li>
 							</ul>
 						</div>
 					</div>
@@ -855,5 +980,101 @@
 		<script src="assets/js/ajaxchimp.min.js"></script>
         <!-- Custom JS -->
 		<script src="assets/js/custom.js"></script>
+    </body>
+</html>
+
+		<!-- Start Copy Right Area -->
+		<div class="copy-right-area">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-8">
+						<p class="copyright">
+							Copyright <i class="ri-copyright-line"></i> 2023 Getsee Design. 
+							<!--<a href="https://envytheme.com/" target="_blank">EnvyTheme</a>-->
+						</p>
+					</div>
+
+					<div class="col-lg-4">
+						<ul class="copy-right-icon">
+							<li>
+								<a href="https://www.facebook.com/" target="_blank">
+									<i class="ri-facebook-fill"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.twitter.com/" target="_blank">
+									<i class="ri-twitter-fill"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/" target="_blank">
+									<i class="ri-instagram-fill"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/" target="_blank">
+									<i class="ri-linkedin-box-fill"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Copy Right Area -->
+		
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="ri-arrow-up-s-fill"></i>
+			<i class="ri-arrow-up-s-fill"></i>
+		</div>
+		<!-- End Go Top Area -->
+
+        <!-- Jquery Min JS -->
+        <script src="assets/js/jquery.min.js"></script> 
+        <!-- Bootstrap Bundle Min JS -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- Meanmenu Min JS -->
+		<script src="assets/js/meanmenu.min.js"></script>
+		<!-- Owl Carousel Min JS -->
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<!-- Wow Min JS -->
+        <script src="assets/js/wow.min.js"></script>
+		<!-- Magnific Popup Min JS -->
+        <script src="assets/js/magnific-popup.min.js"></script>
+		<!-- Appear Min JS --> 
+        <script src="assets/js/appear.min.js"></script>
+		<!-- Odometer Min JS --> 
+		<script src="assets/js/odometer.min.js"></script>
+		<!-- Form Validator Min JS -->
+		<script src="assets/js/form-validator.min.js"></script>
+		<!-- Contact JS -->
+		<script src="assets/js/contact-form-script.js"></script>
+		<!-- Ajaxchimp Min JS -->
+		<script src="assets/js/ajaxchimp.min.js"></script>
+        <!-- Custom JS -->
+		<script src="assets/js/custom.js"></script>
+    <script>
+        // JavaScript functions to handle button clicks for Section 1 and Section 2
+        function navigateToSection1() {
+            // Redirect to the target page with the anchor tag pointing to Section 1
+            window.location.href = 'Portfolio.html#section1';
+        }
+
+        function navigateToSection2() {
+            // Redirect to the target page with the anchor tag pointing to Section 2
+            window.location.href = 'Portfolio.html#section2';
+        }
+		  function navigateToSpecialized() {
+            // Redirect to the target page with the anchor tag pointing to Section 2
+            window.location.href = 'Portfolio.html#specialized';
+        }
+		  function navigateToUpholstry() {
+            // Redirect to the target page with the anchor tag pointing to Section 2
+            window.location.href = 'Portfolio.html#upholstry';
+        }
+    </script>
+
+   
     </body>
 </html>

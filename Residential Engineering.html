@@ -5,32 +5,106 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<style>
-			.side-by-side1 {
-			  display: flex;
-			  justify-content: space-between;
-			}
+		.float-container {
+    border: 3px solid #fff;
+    padding-left: 0px;
+	font-size: 20px;
+	font-style: italic;}
+
+	.float-child .main{
+    width: 100%;
+    
+    padding-left:0%;
+    
+
+}
+.float-child .first{
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+    
+}  
+
+.float-child .second{
+    width: 50%;
+    float: right;
+    padding-left: 10px;
+    
+}  
+.float-child .third {
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+    
+}  
+.float-child .fourth {
+    width: 50%;
+    float: right;
+	padding-left:10%;
+    
+}  
+
+.clear{clear: both;}
 			
-			.paragraph1 {
-			  width: 48%; /* Adjust as needed */
-			}
 		  </style>
+
 		  <style>
-			.side-by-side2 {
-			  display: flex;
-			  justify-content: space-between;
-			  align-items: center;
-			}
-			
-			.paragraph2 {
-			  width: 48%; /* Adjust as needed */
-			  padding: 10px;
-			}
-			
-			.paragraph img {
-			  max-width: 100%;
-			  height: auto;
-			}
-		  </style>
+		  	  div.slide-fastmain {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fastmain div.inner {
+  animation: slide-fast1 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fastmain {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+div.slide-fast1 {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fast1 div.inner {
+  animation: slide-fast1 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fast1 {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+div.slide-fast2 {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-fast2 div.inner {
+  animation: slide-fast2 2s;
+  margin-top:0%;
+}
+
+@keyframes slide-fast2 {
+  from {
+    margin-right: 100%;
+  }
+
+  to {
+    margin-right: 0%;
+  }
+}
+</style>
 		
 		<!-- Bootstrap Min CSS --> 
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -175,8 +249,8 @@
 											<li class="nav-item">
 												<a href="index-3.html" class="nav-link">Home Three</a>
 											</li>
-										</ul>
-									</li>-->
+										</ul>-->
+									</li>
 
 
 
@@ -196,7 +270,7 @@
 											<li class="nav-item">
 												<a href="Industrial Engineering.html" class="nav-link">Industrial</a>
 											</li>
-											<li class="nav-item">
+											<li class="nav-item active">
 												<a href="Residential Engineering.html" class="nav-link">Residential</a>
 											</li>
 											<li class="nav-item">
@@ -444,7 +518,7 @@
 				<div class="page-title-content">
 					<h2>Residential Engineering</h2>
 
-					<ul>
+					<!--<ul>
 						<li>
 							<a href="index.html">
 								Home 
@@ -452,7 +526,7 @@
 						</li>
 
 						<li class="active">Services Details</li>
-					</ul>
+					</ul>-->
 				</div>
 			</div>
 
@@ -463,27 +537,96 @@
 		<!-- End Page Title Area -->
 
 		<!-- Start Services Details Area -->
+		
+		<!-- Start Services Details Area -->
+	<!-- Start Services Details Area -->
 		<section class="services-details-area ptb-50">
 			<div class="container">
 				<div class="services-details-content main-default-content">
 					<!--<h2>Automation Industry</h2>-->
-
+					<div class="float-container">
+					<div class="float-container">
+					<div class="gap-20"></div>
+					<div class="float-child">
+					<div class="main">
+					<div class="slide-fastmain">
+					<div class="inner">
 					<img src="assets/images/services-bg.jpg" alt="Image">
+					</div>
+				</div>
+				</div>
+				<div class=clear></div>
+				
+
+							
 
 					<div class="gap-20"></div>
-					<div class="side-by-side1">
+					<div class="float-container">
+					<div class="float-child">
+					<div class="first">
+					<div class="slide-fast1">
+					<div class="inner">
+					<ul>
+					<li>SPECIALIST WELDING</li>
+					<li>PANEL REPAIR</li>
+					<li>GATES/ WALKWAYS/ RAILINGS</li>
+					<li>TANKS/ BUNDS</li>
+					<li>SECURITY CAGES</li>
+					<li>STORAGE SYSTEMS</li>
+					<li>CUSTOM BUILDS</li>
+					</ul>
+					</p>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+				<div class="float-child">
+					<div class="second">
+					<div class="slide-fast1">
+					<div class="inner">
+					<img src="assets/images/welding.jpg"></div></div></div></div>
+					<div class="clear"></div>
+					<div class="clear"></div>
 
-					<p class="paragraph1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
 
-					<p class="paragraph2"><img src="assets/images/welding.jpg"></p></div>
 
-					<div class="gap-20"></div>
+
+
+					<div class="gap-20 pb-70"></div>
 					
-					<div class="side-by-side2">
+					
+					
+				
 
-						<p class="paragraph2"><img src="assets/images/drill machine.jpg"></p>
-	
-						<p class="paragraph1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p></div>
+						<div class="gap-20"></div>
+						<div class="float-container">
+						<div class="float-child">
+						<div class="third">
+						<div class="slide-fast2">
+					<div class="inner">
+
+						<img src="assets/images/drill machine.jpg"></div></div>
+						</div></div>
+						
+
+						<div class="float-child">
+							<div class="fourth">
+							<div class="slide-fast2">
+					<div class="inner">
+						<h3>Fabrication & Fitting</h3>
+					<p>With nearly 20yrs experience in metal fabrication and fitting  we are dedicated to get the best finish on every project </p>
+					
+					<section style="display: flex; justify-content: flex-end;">
+<button class="default-btn"  onclick="navigateToResidential()">Residential Engineering Projects
+										<i class="ri-arrow-right-line"></I>
+										</button>
+					
+					</div></div></div></div></div>
+
+					
+
+					
 	
 						<!--<div class="gap-20"></div>
 
@@ -512,7 +655,9 @@
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>-->
 				</div>
 			</div>
+			<div class=clear></div>
 		</section>
+		
 		<!--<div style="clear: both;"></div>-->
 		<!-- End Services Details Area -->
 
@@ -535,9 +680,9 @@
 		<section class="fetcher-servicess-area pt-40 pb-70">
 			<div class="container">
 				<div class="section-title">
-					<span class="top-title">OTHER SERVICES</span>
-					<h2>Other Services That We Offer</h2>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna. aliquyam erat, sed diam voluptua</p>
+					<span class="top-title">MORE SERVICES</span>
+						<h2><b>More Industrial/General Engineering Services We Provide </b> </h2>
+					<!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna. aliquyam erat, sed diam voluptua</p>-->
 				</div>
 				<div class="row justify-content-center">
 					<div class="col-lg-3 col-sm-6">
@@ -574,6 +719,27 @@
 							<!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>-->
 
 							<a href="Plant_Agri Engineering.html" class="read-more">
+								Find Out More
+								<i class="ri-arrow-right-line"></i>
+							</a>
+
+							<span>2</span>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-fetcher-services">
+							<img src="assets/images/icon/icon-14.png" alt="Image">
+
+					<h3>
+								<a href="Custom-Services.html">
+									Custom Services
+								</a>
+							</h3>
+
+							<!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>-->
+
+							<a href="services-details.html" class="read-more">
 								Find Out More
 								<i class="ri-arrow-right-line"></i>
 							</a>
@@ -681,7 +847,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="External Range.html">
+									<a href="Forged_External.html">
 										Forged External
 									</a>
 								</li>
@@ -882,5 +1048,10 @@
 		<script src="assets/js/ajaxchimp.min.js"></script>
         <!-- Custom JS -->
 		<script src="assets/js/custom.js"></script>
+		<script>function navigateToResidential() {
+            // Redirect to the target page with the anchor tag pointing to Section 1
+            window.location.href = 'Portfolio.html#residential';
+        }
+		 </script>
     </body>
 </html>
