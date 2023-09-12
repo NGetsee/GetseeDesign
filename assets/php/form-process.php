@@ -37,7 +37,7 @@ if (empty($_POST["message"])) {
     $message = $_POST["message"];
 }
 
-$EmailTo = "info@getseedesign.com";
+$EmailTo = "Nikki.g087@gmail.com";
 
 $Subject = "New Message Received";
 
