@@ -1,26 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const dataList = document.getElementById("data-list");
-    const dataInput = document.getElementById("data-input");
-    const addButton = document.getElementById("add-button");
-
-    addButton.addEventListener("click", async () => {
-        const newData = dataInput.value;
-        if (newData) {
-            // Use a Netlify Function to add data to your "database"
-            const response = await fetch("/.netlify/functions/addData", {
-                method: "POST",
-                body: JSON.stringify({ data: newData }),
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                const listItem = document.createElement("li");
-                listItem.textContent = data.data;
-                dataList.appendChild(listItem);
-                dataInput.value = "";
-            } else {
-                console.error("Failed to add data");
-            }
-        }
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('quote-form');
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent the default form submission behavior
+  
+      // Collect form data
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+  
+      // Send data to the serverless function
+      fetch('/.netlify/functions/submitForm', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      })
+        .then(response => response.json())
+        .then(result => {
+          // Handle the response from the serverless function
+          console.log(result);
+          // You can also redirect the user to a thank-you page or display a confirmation message.
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
     });
-});
+  });
+  
