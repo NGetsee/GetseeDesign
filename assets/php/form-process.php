@@ -16,10 +16,10 @@ if ($conn->connect_error) {
 // Retrieve form data
 $name = $_POST["name"];
 $email = $_POST["email"];
-$message = $_POST["message"];
+
 
 // Insert data into MySQL database
-$sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
+$sql = "INSERT INTO contacts (name, email) VALUES ('$name', '$email')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Form data has been successfully submitted.";
