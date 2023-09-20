@@ -1,30 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('quote-form');
-  
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent the default form submission behavior
-  
-      // Collect form data
-      const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
-  
-      // Send data to the serverless function
-      fetch('/.netlify/functions/submitForm', {
-        method: 'POST',
-        body: JSON.stringify(data),
-      })
-        .then(response => response.json())
-        .then(result => {
-          // Handle the response from the serverless function
-          console.log(result);
-          // You can also redirect the user to a thank-you page or display a confirmation message.
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('data.db');
+
+// Create a table to store form data (if it doesn't exist)
+db.serialize(() => {
+    db.run("CREATE TABLE IF NOT EXISTS formData (name TEXT, email TEXT)");
+});
+
+const form = document.getElementById('data-form');
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    // Insert form data into the SQLite database
+    db.run("INSERT INTO formData (name, email) VALUES (?, ?)", [name, email], function (err) {
+        if (err) {
+            console.error(err.message);
+            return;
+        }
+        console.log(`A row has been inserted with rowid ${this.lastID}`);
+        // You can add a success message or redirect to a thank-you page here.
     });
-  });
-  
+});
