@@ -1,58 +1,26 @@
-// JavaScript source code
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", () => {
+    const dataList = document.getElementById("data-list");
+    const dataInput = document.getElementById("data-input");
+    const addButton = document.getElementById("add-button");
 
-    const form = document.getElementById('myForm');
+    addButton.addEventListener("click", async () => {
+        const newData = dataInput.value;
+        if (newData) {
+            // Use a Netlify Function to add data to your "database"
+            const response = await fetch("/.netlify/functions/addData", {
+                method: "POST",
+                body: JSON.stringify({ data: newData }),
+            });
 
-    const responseDiv = document.getElementById('response');
-
- 
-
-    form.addEventListener('submit', function (e) {
-
-        e.preventDefault(); // Prevent the default form submission
-
- 
-
-        const formData = new FormData(form);
-
- 
-
-        // Make a POST request to your Netlify serverless function
-
-        fetch('/.netlify/functions/submitForm', {
-
-            method: 'POST',
-
-            body: JSON.stringify(Object.fromEntries(formData)),
-
-            headers: {
-
-                'Content-Type': 'application/json',
-
-            },
-
-        })
-
-        .then(response => response.json())
-
-        .then(data => {
-
-            // Handle the response from the serverless function
-
-            responseDiv.innerHTML = data.message;
-
-        })
-
-        .catch(error => {
-
-            console.error('Error:', error);
-
-            responseDiv.innerHTML = 'An error occurred while submitting the form.';
-
-        });
-
+            if (response.ok) {
+                const data = await response.json();
+                const listItem = document.createElement("li");
+                listItem.textContent = data.data;
+                dataList.appendChild(listItem);
+                dataInput.value = "";
+            } else {
+                console.error("Failed to add data");
+            }
+        }
     });
-
 });
-
- 
