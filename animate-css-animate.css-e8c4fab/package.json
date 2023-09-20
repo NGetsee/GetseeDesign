@@ -73,3 +73,7 @@
     "source/**/*.css"
   ]
 }
+"scripts": {
+    "deploy": "netlify deploy",
+    "functions-deploy": "netlify functions:deploy"
+}

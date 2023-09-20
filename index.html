@@ -38,7 +38,56 @@
 		<!-- Title -->
 		
 		<title>Getsee Design</title>
-		
+		<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+
+<!-- Add Firebase products that you'd like to use -->
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"></script>
+<!-- Include other Firebase SDKs you need (e.g., Firebase Firestore) -->
+
+<!-- Initialize Firebase with your configuration -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase with your configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCMVDJnOLn2sM3MHN5Vvr8gt653q4gageU",
+            authDomain: "getsee-design.firebaseapp.com",
+            databaseURL: "https://getsee-design-default-rtdb.firebaseio.com",
+            projectId: "getsee-design",
+            storageBucket: "getsee-design.appspot.com",
+            messagingSenderId: "131314442225",
+            appId: "1:131314442225:web:272fea9257c51dca00ae50",
+            measurementId: "G-65HHM7TNWX"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to the database service
+        var database = firebase.database();
+
+        // Function to handle form submission
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            // Reference to a specific location in the database
+            var usersRef = database.ref("users");
+
+            // Push data to the database
+            var newUserRef = usersRef.push();
+            newUserRef.set({
+                name: name,
+                email: email
+            });
+
+            // Clear form fields
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+
+            alert("Data submitted successfully!");
+        }
+    </script>
 
     </head>
 
@@ -1024,7 +1073,7 @@
 				</div>
 
 				<div class="col-12">
-				<button type="submit" class="default-btn">
+				<button type="submit" onclick="submitForm()" class="default-btn">
 				Request a Callback
 				<i class="ri-arrow-right-line"></i>
 				</button>
