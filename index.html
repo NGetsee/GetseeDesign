@@ -1031,10 +1031,49 @@
 				</button>
 				</div>
 				</div>
+						<script src="firebase.js"></script>
+		<script> // app.js
+	import firebase from "./firebase";
+
+	document.addEventListener("DOMContentLoaded", () => {
+    const dataForm = document.getElementById("data-form");
+    const dataInput = document.getElementById("data-input");
+    const dataList = document.getElementById("data-list");
+
+    dataForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent the default form submission behavior
+
+        const newData = dataInput.value.trim(); // Get the data from the input field
+
+        if (newData) {
+            // Reference to the Firebase database
+            const database = firebase.database();
+            const dataRef = database.ref("data");
+
+            // Push the new data to the database
+            dataRef.push({ value: newData });
+
+            // Clear the input field
+            dataInput.value = "";
+        }
+    });
+
+    // Listen for changes in the database and update the list
+    const dataRef = firebase.database().ref("data");
+    dataRef.on("child_added", (snapshot) => {
+        const data = snapshot.val();
+        const listItem = document.createElement("li");
+        listItem.textContent = data.value;
+        dataList.appendChild(listItem);
+    });
+});
+</script>
 			</form>
 
 		</div>
+
 	</section>
+
 		<!-- End Get Your Quote Area -->
 
 		<!-- Start Latest News Area 
@@ -1413,43 +1452,7 @@
         <!-- Custom JS -->
 		<script src="assets/js/custom.js"></script>
 		<script src="assets/script.js"></script>
-		<script src="firebase.js"></script>
-		<script> // app.js
-	import firebase from "./firebase";
 
-	document.addEventListener("DOMContentLoaded", () => {
-    const dataForm = document.getElementById("data-form");
-    const dataInput = document.getElementById("data-input");
-    const dataList = document.getElementById("data-list");
-
-    dataForm.addEventListener("submit", (e) => {
-        e.preventDefault(); // Prevent the default form submission behavior
-
-        const newData = dataInput.value.trim(); // Get the data from the input field
-
-        if (newData) {
-            // Reference to the Firebase database
-            const database = firebase.database();
-            const dataRef = database.ref("data");
-
-            // Push the new data to the database
-            dataRef.push({ value: newData });
-
-            // Clear the input field
-            dataInput.value = "";
-        }
-    });
-
-    // Listen for changes in the database and update the list
-    const dataRef = firebase.database().ref("data");
-    dataRef.on("child_added", (snapshot) => {
-        const data = snapshot.val();
-        const listItem = document.createElement("li");
-        listItem.textContent = data.value;
-        dataList.appendChild(listItem);
-    });
-});
-</script
 	
 
 		
