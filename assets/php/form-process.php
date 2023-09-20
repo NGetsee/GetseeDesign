@@ -19,7 +19,7 @@ $email = $_POST["email"];
 
 
 // Insert data into MySQL database
-$sql = "INSERT INTO contacts (name, email) VALUES ('$name', '$email')";
+$sql = "INSERT INTO form_submission (name, email) VALUES ('$name', '$email')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Form data has been successfully submitted.";
