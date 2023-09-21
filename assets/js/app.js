@@ -9,25 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Get form data
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
-      const formData = {
-        name: "John Doe",
-        email: "john@example.com",
-    };
-    
-    fetch("/.netlify/functions/submitForm", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json", // Specify JSON content type
-        },
-        body: JSON.stringify(formData),
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        // Handle the response
-    })
-    .catch((error) => {
-        // Handle errors
-    });
   
       // Send a POST request to the Netlify function
       fetch("/.netlify/functions/submitForm", {
