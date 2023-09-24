@@ -3,7 +3,7 @@
         'name' => '20099/getsee-design',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'a55ca4d964ce741b3b783bd139d1f9ae8de76e49',
+        'reference' => '4d07ad4000e6e3297aa701be81746b0fc5551a92',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '20099/getsee-design' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'a55ca4d964ce741b3b783bd139d1f9ae8de76e49',
+            'reference' => '4d07ad4000e6e3297aa701be81746b0fc5551a92',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -238,8 +238,8 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-factory' => array(
@@ -254,8 +254,8 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-message' => array(
@@ -270,8 +270,8 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/log' => array(
