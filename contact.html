@@ -4,6 +4,7 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 		<!-- Bootstrap Min CSS --> 
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -433,7 +434,7 @@
 		<!-- Start Contact Area -->
 		<section class="main-contact-area pt-100 pb-100">
 			<div class="container">
-				<form class="get-quote-form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="true">>
+				<form class="get-quote-form" name="frmContact" method="post" action="contact.php">>
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="contact-img">
@@ -449,14 +450,14 @@
 								<div class="row">
 									<div class="col-lg-6 col-sm-6">
 										<div class="form-group">
-											<input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Name">
+											<input type="text" class="form-control" name="txtName" id="txtName" required data-error="Please enter your name" placeholder="Name">
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
 			
 									<div class="col-lg-6 col-sm-6">
 										<div class="form-group">
-											<input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
+											<input type="email" name="txtEmail" id="txtEmail" class="form-control" required data-error="Please enter your email" placeholder="Email">
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
@@ -492,7 +493,7 @@
 									</div>
 			
 									<div class="col-lg-12 col-md-12">
-										<button type="submit" class="default-btn">
+										<button type="submit" class="default-btn" id="requestCallback">
 											<span>Send message</span>
 										</button>
 										<div id="msgSubmit" class="h3 text-center hidden"></div>
@@ -843,5 +844,8 @@
 		<script src="assets/js/ajaxchimp.min.js"></script>
         <!-- Custom JS -->
 		<script src="assets/js/custom.js"></script>
+		<script src="assets/script.js"></script>
+		<script src="popup.js"></script>
+		<script src="popupprompt.js"></script>
     </body>
 </html>
