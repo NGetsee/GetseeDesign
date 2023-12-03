@@ -3,4 +3,4 @@
 	url = https://github.com/PHPMailer/PHPMailer.git
 [submodule "phpmailer"]
 	path = phpmailer
-	url = https://github.com/vendor/phpmailer/phpmailer.git
+	url = https://github.com/phpmailer/phpmailer.git
